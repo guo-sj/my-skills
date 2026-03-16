@@ -31,7 +31,7 @@ gh issue list --limit 50
 
 - 若 stderr 包含 "Issues are disabled" → 提示 "该仓库未启用 Issues 功能"，停止
 - 其他失败 → 输出原始错误，停止
-- 返回空列表 → 提示 "当前仓库没有 open issues"，停止
+- 返回空列表 → 提示 "当前仓库没有 open issues"，直接退出，**不进入步骤 3**
 - 成功 → 展示列表，并在末尾附注：
   > "（showing first 50 open issues；如有更多请通过 `gh issue list` 查看）"
 
